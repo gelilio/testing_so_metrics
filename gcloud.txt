@@ -7,3 +7,9 @@ gcloud functions deploy testing-so-metrics-v1 \
 --entry-point=main \
 --trigger-http \
 --allow-unauthenticated
+
+# CI CD Cloud Function gen2 mote
+
+From Cloud Build Setting
+1. Enable Cloud Function
+2. Enable Cloud Run
