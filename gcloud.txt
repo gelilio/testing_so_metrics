@@ -1,0 +1,9 @@
+# command to deploy to Google Cloud Function gen2
+
+gcloud functions deploy testing-so-metrics-v1 \
+--gen2 \
+--runtime=python310 \
+--source=. \
+--entry-point=main \
+--trigger-http \
+--allow-unauthenticated
