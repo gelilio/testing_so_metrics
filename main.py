@@ -5,14 +5,13 @@ import comment
 import constants
 import query
 from dateutil.relativedelta import relativedelta
-import tkinter as tk
-from tkinter import messagebox as msgb
 
-root = tk.Tk()
-root.withdraw()
+def showMessage(message='Succefully Executed',type='info', timeout=2500):   
+    import tkinter as tk
+    from tkinter import messagebox as msgb
 
-
-def showMessage(message='Succefully Executed',type='info', timeout=2500):        
+    root = tk.Tk()
+    root.withdraw()
     try:
         root.after(timeout, root.destroy)
         if type == 'info':
