@@ -5,6 +5,24 @@ import comment
 import constants
 import query
 from dateutil.relativedelta import relativedelta
+import tkinter as tk
+from tkinter import messagebox as msgb
+
+root = tk.Tk()
+root.withdraw()
+
+
+def showMessage(message='Succefully Executed',type='info', timeout=2500):        
+    try:
+        root.after(timeout, root.destroy)
+        if type == 'info':
+            msgb.showinfo('Info', message, master=root)
+        elif type == 'warning':
+            msgb.showwarning('Warning', message, master=root)
+        elif type == 'error':
+            msgb.showerror('Error', message, master=root)
+    except:
+        pass
 
 #start_str = "2022-10-01"
 #end_str = "2022-11-01"
@@ -125,3 +143,4 @@ def main(request):
     answer_runner(start_str=start_str,end_str=end_str,start_date=start_date,end_date=end_date,table_name_suffix=table_name_suffix)
     comment_runner(start_str=start_str,end_str=end_str,start_date=start_date,end_date=end_date,table_name_suffix=table_name_suffix)
     query_runner(table_name_suffix=table_name_suffix)
+    showMessage()
