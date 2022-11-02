@@ -1,3 +1,3 @@
 # testing_so_metrics
-Get the metrics for every
+Get the metrics
 testing for initial upload
